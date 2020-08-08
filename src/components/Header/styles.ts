@@ -8,8 +8,28 @@ export const Container = styled.div`
 	padding: 11px 16px;
 `;
 
-export const GitHubLogo = styled(FaGithub)``;
+export const GitHubLogo = styled(FaGithub)`
+	fill: var(--logo);
+	width:32px;
+	height:32px;
+	flex-shrink:0;
+`;
 
 export const SearchForm = styled.form`
-  
+	padding-left:16px;
+	width: 100%;
+
+	input {
+		background: var(--search);
+		outline:0;
+		border-radius:6px;
+		padding: 7px 12px;
+		width:100%;
+
+		&:focus{
+			width: 320px;
+		}
+
+		transition: width .2s ease-out, color .2s ease-out;
+	}
 `;
